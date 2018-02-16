@@ -61,14 +61,14 @@ dependencies {
 }
 
 findbugs {
-  //ignoreFailures = true
+  ignoreFailures = true
   toolVersion = "3.0.1"
   effort = "max"
   //findbugsTest.enabled=false
 }
 
 pmd {
-  //ignoreFailures = true
+  ignoreFailures = true
   //pmdTest.enabled=false
   toolVersion = '5.8.1'
   consoleOutput = true
