@@ -20,7 +20,9 @@ cache:
     - $HOME/.gradle/wrapper/
 
 script:
-  - ./gradlew check & ./gradlew dockerDistTar & docker build -t $DOCKER_ORGANIZATION/$DOCKER_REPO:1.0 ./build/docker/
+  - ./gradlew check
+  - ./gradlew dockerDistTar
+  - docker build -t $DOCKER_ORGANIZATION/$DOCKER_REPO:1.0 ./build/docker/
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" AND "$TRAVIS_TEST_RESULT" == 0]; then
