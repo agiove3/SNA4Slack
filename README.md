@@ -1,17 +1,48 @@
-[![Build Status](https://travis-ci.org/agiove3/SNA4Slack.svg?branch=master)](https://travis-ci.org/agiove3/SNA4Slack)
+[![Build Status][image-1]][1]
 
 # SNA4Slack
-## Network Analysis and Visualization for Slack Teams
+La struttura della repository si presenta nel seguente modo:
+	|–– config
+	|    |–– checkstyle 
+	|–– doc
+	|    |–– drawings
+	|    |–– javadoc 
+	|    |–– Report.md
+	|–– gradle
+	|–– lib
+	|–– res
+	|–– src
+	|    |–– main
+	|    |–– test
+	|–– .gitignore
+	|–– .travis.yml
+	|–– build.gradle
+	|–– Caso di studio.md
+	|–– Guida allo studente.pdf
+	|–– gradlew
+	|–– gradle.bat
+	|–– README.md
+	|–– settings.gradle
+	|–– Workflow - diagramma.xml
 
-### Description
+Nel seguito si dettagliano i ruoli dei diversi componenti:
+- **config**: ospita i file di configurazione. L’unica configurazione di base richiesta è quella per il tool checkstyle;
+- **doc**: in questa cartella deve essere inserita tutta la documentazione relativa al caso di studio. In particolare, in *drawings* dovranno essere salvati i diagrammi UML e *javadoc* ospiterà la documentazione generata automaticamente per il codice Java. Il file *Report.md* rappresenta la relazione finale del caso di studio, da stilare prima della consegna;
+- **gradle**: contiene il jar per il sistema di gestione delle dipendenze *Gradle*.
+- **lib**: creata per includere eventuali *jar* di librerie esterne utilizzate dal progetto.
+- **res**: la cartella deve contenere tutte le risorse usate dal sistema (immagini, testi ecc.)
+- **src**: la cartella principale del progetto, in cui scrivere tutto il codice dell’applicazione. In *main* ci saranno i file sorgente e *test* conterrà i test di unità previsti.
+- **.gitignore**: specifica tutti i file che devono essere esclusi dal sistema di controllo versione.
+- **.travis.yml**: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di Travis CI;
+- **build.gradle**: esplicita le direttive e la configurazione per *Gradle*. 
+- **Caso di studio.md**: fare riferimento a questo file per la descrizione dettagliata del progetto;
+- **Guida allo studente.pdf:**: elenca e descrive tutti i passi di configurazione necessari per attivare l’intero flusso di lavoro dietro lo sviluppo del caso di studio;
+- **gradlew & gradlew.bat**: sono i file eseguibili di *Gradle*, rispettivamente per Unix e per Windows. Vengono generati automaticamente da Eclipse;
+- **settings.gradle**: file di configurazione di *Gradle*. Anche quest’ultimo viene generato automaticamente da Eclipse.
+- **Workflow - diagramma.xml**: descrive il flusso di lavoro attraverso il formalismo UML. In particolare, viene usato un *diagramma di attività*.
 
-This web application will allow users to visualize and analyze social networks built upon Slack conversations within public channels.
-Source data will come from Slack export archives of open source projects, publicly available at http://slackarchive.io.
+In alcune cartelle è possibile notare la presenza di un unico file nascosto “.keep”: questo ha il solo scopo di richiedere a Git l’inclusione delle cartelle in cui è contenuto (Git esclude dal *versioning* le cartelle vuote). Pertanto, il file può essere ignorato o eventualmente cancellato nel momento in cui si inserisca almeno un altro file all’interno della cartella.
 
-Social networks will have Slack’s team members as nodes and will vary according to which communication exchange is considered for edges. Among possible social networks, consider first a mention-based network in which edges are direct and represent mentions (@username) to call the attention of a team member. A weight might be assigned to represent the number of mentions. Another network might be a subscription-based network in which edges are drawn between all the team members who subscribe to the same Slack public channel. A weight might be assigned to represent the number of common subscribed channels.
+[1]:	https://travis-ci.org/agiove3/SNA4Slack
 
-Visualizations should provide a way to show the network graph, without node overlapping, using one or more layout algorithms.
-
-The system might allow the user to set filters for pruning the graph by keeping only nodes and edges that satisfies filters conditions. For example, you might define thresholds for edge weights to visualize pruned graphs with edges removed if under the threshold and nodes removed if disconnected. When filtering is disabled, the whole graph will be set again as the visible view.
-
-The system should provide the most common metrics for social network analysis (SNA), including metrics to assess the overall structure of the network (e.g., measures for density, path length, and overall connectedness), centrality metrics (e.g., degree for undirected graphs and indegree/outdegree for directed graphs) and metrics the assess the level of clustering within a network (e.g., clustering coefficient). SNA measures might be shown in tabular mode as well as decoration of network graphs. SNA measures might be also used as filters for pruning the graphs.
+[image-1]:	https://travis-ci.org/agiove3/SNA4Slack.svg?branch=master
