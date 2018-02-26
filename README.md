@@ -18,12 +18,12 @@ La struttura della repository si presenta nel seguente modo:
 	|–– .travis.yml
 	|–– build.gradle
 	|–– Caso di studio.md
-	|–– Guida allo studente.pdf
+	|–– Guida per lo studente.pdf
 	|–– gradlew
 	|–– gradle.bat
 	|–– README.md
 	|–– settings.gradle
-	|–– Workflow - diagramma.xml
+	|–– Workflow.xml
 
 Nel seguito si dettagliano i ruoli dei diversi componenti:
 - **config**: ospita i file di configurazione. L’unica configurazione di base richiesta è quella per il tool checkstyle;
@@ -36,10 +36,10 @@ Nel seguito si dettagliano i ruoli dei diversi componenti:
 - **.travis.yml**: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di Travis CI;
 - **build.gradle**: esplicita le direttive e la configurazione per *Gradle*. 
 - **Caso di studio.md**: fare riferimento a questo file per la descrizione dettagliata del progetto;
-- **Guida allo studente.pdf:**: elenca e descrive tutti i passi di configurazione necessari per attivare l’intero flusso di lavoro dietro lo sviluppo del caso di studio;
+- **Guida per lo studente.pdf:**: elenca e descrive tutti i passi di configurazione necessari per attivare l’intero flusso di lavoro dietro lo sviluppo del caso di studio;
 - **gradlew & gradlew.bat**: sono i file eseguibili di *Gradle*, rispettivamente per Unix e per Windows. Vengono generati automaticamente da Eclipse;
 - **settings.gradle**: file di configurazione di *Gradle*. Anche quest’ultimo viene generato automaticamente da Eclipse.
-- **Workflow - diagramma.xml**: descrive il flusso di lavoro attraverso il formalismo UML. In particolare, viene usato un *diagramma di attività*.
+- **Workflow.xml**: descrive il flusso di lavoro attraverso il formalismo UML. In particolare, viene usato un *diagramma di attività*.
 
 In alcune cartelle è possibile notare la presenza di un unico file nascosto “.keep”: questo ha il solo scopo di richiedere a Git l’inclusione delle cartelle in cui è contenuto (Git esclude dal *versioning* le cartelle vuote). Pertanto, il file può essere ignorato o eventualmente cancellato nel momento in cui si inserisca almeno un altro file all’interno della cartella.
 
