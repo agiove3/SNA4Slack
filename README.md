@@ -2,28 +2,30 @@
 
 # SNA4Slack
 La struttura della repository si presenta nel seguente modo:
-	|–– config
-	|    |–– checkstyle 
-	|–– doc
-	|    |–– drawings
-	|    |–– javadoc 
-	|    |–– Report.md
-	|–– gradle
-	|–– lib
-	|–– res
-	|–– src
-	|    |–– main
-	|    |–– test
-	|–– .gitignore
-	|–– .travis.yml
-	|–– build.gradle
-	|–– Caso di studio.md
-	|–– Guida per lo studente.pdf
-	|–– gradlew
-	|–– gradle.bat
-	|–– README.md
-	|–– settings.gradle
-	|–– Workflow.xml
+```
+|–– config
+|    |–– checkstyle
+|–– doc
+|    |–– drawings
+|    |–– javadoc 
+|    |–– Report.md
+|–– gradle
+|–– lib
+|–– res
+|–– src
+|    |–– main
+|    |–– test
+|–– .gitignore
+|–– .travis.yml
+|–– build.gradle
+|–– Caso di studio.md
+|–– Guida per lo studente.md
+|–– gradlew
+|–– gradle.bat
+|–– README.md
+|–– settings.gradle
+|–– Workflow - diagramma.xml
+```
 
 Nel seguito si dettagliano i ruoli dei diversi componenti:
 - **config**: ospita i file di configurazione. L’unica configurazione di base richiesta è quella per il tool checkstyle;
